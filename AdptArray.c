@@ -71,7 +71,10 @@ Result SetAdptArrayAt(PAdptArray pAdaptArray, int index, PElement newElement)
     {
         pAdaptArray->del(((pAdaptArray->pelm)[index]));
     }
-    (pAdaptArray->pelm)[index] = pAdaptArray->cpy(newElement);
+    if (newElement != NULL)
+    {
+        (pAdaptArray->pelm)[index] = pAdaptArray->cpy(newElement);
+    }
     return SUCCESS;
 }
 
@@ -120,6 +123,4 @@ void PrintDB(PAdptArray pAdaptArray)
 	}
 
 }
-
-
 
