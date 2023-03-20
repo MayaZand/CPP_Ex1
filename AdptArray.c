@@ -28,6 +28,7 @@ PAdptArray CreateAdptArray(COPY_FUNC cpy, DEL_FUNC del, PRINT_FUNC prnt)
     pAdaptArray->cpy = cpy;
     pAdaptArray->del = del;
     pAdaptArray->prnt = prnt;
+    return pAdaptArray;
 }
 
 void DeleteAdptArray(PAdptArray pAdaptArray)
